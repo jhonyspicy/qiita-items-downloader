@@ -66,12 +66,6 @@ while has_next_page:
                 f.write(f"Created: {item['created_at']}\n\n")
                 f.write(item['body'])
 
-            # print(f"タイトル: {item['title']}")
-            # print(f"ユーザー：{item['user']['id']}")
-            # print(f"投稿日: {item['created_at']}")
-            # print(f"保存先: articles/{filename}")
-            # print("-" * 40)
-
         # 次のページへ
         page += 1
 
