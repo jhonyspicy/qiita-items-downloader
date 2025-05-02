@@ -1,0 +1,8 @@
+ipython
+jinja2
+pyyaml
+requests
+six
+tornado
+wheel
+python-dotenv

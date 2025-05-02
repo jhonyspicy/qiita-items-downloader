@@ -1,0 +1,20 @@
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    working_dir: /app
+    # コンテナをバックグラウンドで実行し続けるためのコマンド
+    command: tail -f /dev/null
+    environment:
+      - PYTHONPATH=/app
+    ports:
+      - "8888:8888"
+    # コンテナが常に再起動するよう設定
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
